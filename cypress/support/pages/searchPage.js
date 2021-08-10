@@ -156,7 +156,6 @@ class SearchPage {
 
         this.searchButton()
         .click()
-        .click()
 
     }
 
