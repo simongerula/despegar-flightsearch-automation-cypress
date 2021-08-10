@@ -155,7 +155,8 @@ class SearchPage {
     performSearch = ()=>{
 
         this.searchButton()
-        .click({force : true})
+        .click()
+        .click()
 
     }
 

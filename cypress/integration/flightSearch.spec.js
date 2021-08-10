@@ -1,5 +1,9 @@
 /// <reference types="Cypress"/>
 
+Cypress.on('uncaught:exception', (err, runnable) => {
+    return false;
+})
+
 import SearchPage from '../support/pages/searchPage'
 
 describe('Despegar automation flight search', ()=>{
@@ -20,11 +24,8 @@ describe('Despegar automation flight search', ()=>{
         SearchPage.selectDates()
     })
 
-    it.skip('Passengers Selected', ()=>{
+    it('Passengers Selected and Search done', ()=>{
         SearchPage.selectPassengers()
-    })
-
-    it('Search done', ()=>{
         SearchPage.performSearch()
     })
 

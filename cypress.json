@@ -3,7 +3,7 @@
         "typeOfFlight": "roundTrip",
         "from": "EZE",
         "to": "GIG",
-        "dates": "oneWay",
+        "dates": "noDates",
         "passengers": "2 2",
         "childsAges": "5 9",
         "flightClass": "Economica"
