@@ -3,9 +3,10 @@
         "typeOfFlight": "roundTrip",
         "from": "EZE",
         "to": "GIG",
-        "dates": "noDates",
+        "dates": "2021-10-10 2021-10-29",
         "passengers": "2 2",
         "childsAges": "5 9",
-        "flightClass": "Economica"
+        "flightClass": "Economica",
+        "minPrice": 0
     }
 }

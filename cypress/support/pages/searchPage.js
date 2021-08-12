@@ -154,6 +154,13 @@ class SearchPage {
 
     performSearch = ()=>{
 
+        // La unica forma de bypassear
+        // 'Uncaught TypeError: Cannot read property 'filter' of undefined'
+        this.noDatesCheckBox()
+        .click()
+        this.noDatesCheckBox()
+        .click()
+        //
         this.searchButton()
         .click()
 

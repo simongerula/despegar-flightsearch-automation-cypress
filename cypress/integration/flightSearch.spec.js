@@ -5,6 +5,7 @@
 })*/
 
 import SearchPage from '../support/pages/searchPage'
+import ResultsPage from '../support/pages/resultsPage'
 
 describe('Despegar automation flight search', ()=>{
 
@@ -30,6 +31,10 @@ describe('Despegar automation flight search', ()=>{
 
     it('Search Done', ()=>{
         SearchPage.performSearch()
+    })
+
+    it('Price is cheaper than expected', ()=>{
+        ResultsPage.comparePrice()
     })
 
 })
