@@ -12,7 +12,32 @@ At the end it makes a comparison with the minimum price established and also sho
 4. Selection of dates.
 5. Selection of passengers.
 6. Search successful.
-7. Does the search contain results?
+7. Results found.
 8. Price comparison.
 
+***
 
+### 1 Correct loading of the page
+In this test, it is only verified that the page loads completely and correctly.
+
+### 2 Selection of the type of trip
+In this test the type of trip to look for is defined, it can be round trip or one way trip.
+At the moment multidestination is not developed
+
+### 3 Selection of origin and destination
+This test defines the origin and destination of the flight
+
+### 4 Selection of dates
+In this test, the departure dates and the return date are chosen (if it is a round trip), otherwise only the departure date is entered. You can also select the option to search for trips without a defined date.
+
+### 5 Selection of passengers
+In this test, the number of adult passengers and minor passengers are defined, for each minor passenger their age must be selected. In addition, the class of seats can be selected.
+
+### 6 Search successful
+In this test it is verified that the search is executed correctly
+
+### 7 Results found
+This test checks whether there are flight results found between the origin and the destination.
+
+### 8 Price comparison
+In this test it is verified if the cheapest price found is lower than the established price
