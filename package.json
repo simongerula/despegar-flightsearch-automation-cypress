@@ -4,7 +4,8 @@
   "description": "Project in Cypress, for the parameterized automation of the search for flights on the Despegar site",
   "main": "index.js",
   "scripts": {
-    "open": "cypress open"
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
   },
   "author": "Simon Gerula",
   "license": "ISC",

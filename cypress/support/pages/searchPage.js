@@ -44,7 +44,7 @@ class SearchPage {
 
     }
 
-    selectOriginAndDestiny = ()=>{
+    selectOriginAndDestination = ()=>{
 
         this.originInput()
         .type(Cypress.env('from'))

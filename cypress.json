@@ -2,11 +2,13 @@
     "env":{
         "typeOfFlight": "roundTrip",
         "from": "EZE",
-        "to": "GIG",
-        "dates": "2021-10-10 2021-10-29",
-        "passengers": "2 2",
-        "childsAges": "5 9",
+        "to": "BCN",
+        "dates": "2021-10-20 2021-11-05",
+        "passengers": "2 1",
+        "childsAges": "5",
         "flightClass": "Economica",
-        "minPrice": 0
-    }
+        "minPrice": 1000000
+    },
+    "defaultCommandTimeout": 15000
+
 }

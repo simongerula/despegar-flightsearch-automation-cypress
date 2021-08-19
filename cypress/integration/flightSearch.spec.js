@@ -17,20 +17,24 @@ describe('Despegar automation flight search', ()=>{
         SearchPage.selectTypeOfFlight()
     })
 
-    it('Origin and Destiny Selected', ()=>{
-        SearchPage.selectOriginAndDestiny()
+    it('Origin and Destination Selected', ()=>{
+        SearchPage.selectOriginAndDestination()
     })
 
     it('Dates Selected', ()=>{
         SearchPage.selectDates()
     })
 
-    it('Passengers Selected and Search done', ()=>{
+    it('Passengers Selected', ()=>{
         SearchPage.selectPassengers()
     })
 
     it('Search Done', ()=>{
         SearchPage.performSearch()
+    })
+
+    it('Results Found', ()=>{
+        ResultsPage.haveResults()
     })
 
     it('Price is cheaper than expected', ()=>{
