@@ -45,9 +45,9 @@ In this test, the number of adult passengers and minor passengers are defined, f
 
 > Available parameters: passengers="A C" A(number of adults) / C(number of Childs)
 
->                       childsAges="Q W E" QWE(Age of children)
+> childsAges="Q W E" QWE(Age of children)
 
->                       flightClass = "Economica" / "Premium economy" / "Ejecutiva" / "Primera clase"
+> flightClass = "Economica" / "Premium economy" / "Ejecutiva" / "Primera clase"
 
 
 ### 6 Search successful
@@ -65,4 +65,7 @@ In this test it is verified if the cheapest price found is lower than the establ
 
 ### Complete examples
 #### One way flight from Ezeiza to Rio de Janeiro for two adults and two children aged 5 and 7
-> npx cypress run --env typeOfFlight="oneWay" from="EZE" to="GIG" passengers="2 2" childsAges="5 7"
+>   npx cypress run --env typeOfFlight="oneWay" from="EZE" to="GIG" passengers="2 2" childsAges="5 7"
+
+#### Roundtrip flight Barcelona Madrid for an adult with dates 2021-10-22 to 2021-11-02. Also want to see the process in the browser
+>   npx cypress run --headed --env typeOfFlight="roundTrip" from="BCN" to="Madrid" dates="2021-10-22 2021-11-02"
