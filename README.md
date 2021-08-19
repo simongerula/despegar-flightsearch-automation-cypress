@@ -63,6 +63,9 @@ In this test it is verified if the cheapest price found is lower than the establ
 > Available parameters: Integers
 
 
+***
+
+
 ### Complete examples
 #### One way flight from Ezeiza to Rio de Janeiro for two adults and two children aged 5 and 7
 > npx cypress run --env typeOfFlight="oneWay" from="EZE" to="GIG" passengers="2 2" childsAges="5 7"
