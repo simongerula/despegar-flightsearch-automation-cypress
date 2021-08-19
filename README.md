@@ -25,7 +25,7 @@ In this test the type of trip to look for is defined, it can be round trip or on
 At the moment multidestination is not developed
 >Global variable available: tof (typeOfTravel) [DEFAULT tof=roundTrip]
 
-> Available parameters: roundTrip / oneWay.    Example tof=oneWay
+> Available parameters: "roundTrip" / "oneWay".    Example tof=oneWay
 
 ### 3 Selection of origin and destination
 This test defines the origin and destination of the flight
@@ -41,6 +41,14 @@ In this test, the departure dates and the return date are chosen (if it is a rou
 
 ### 5 Selection of passengers
 In this test, the number of adult passengers and minor passengers are defined, for each minor passenger their age must be selected. In addition, the class of seats can be selected.
+>Global variable available: passengers [DEFAULT passengers="1"] / childsAges [DEFAULT childsAges=""]  /  flightClass [DEFAULT flightClass="Economica"]
+
+> Available parameters: passengers="A C" A(number of adults) / C(number of Childs)
+
+>                       childsAges="Q W E" QWE(Age of children)
+
+>                       flightClass = "Economica" / "Premium economy" / "Ejecutiva" / "Primera clase"
+
 
 ### 6 Search successful
 In this test it is verified that the search is executed correctly
@@ -50,3 +58,11 @@ This test checks whether there are flight results found between the origin and t
 
 ### 8 Price comparison
 In this test it is verified if the cheapest price found is lower than the established price
+>Global variable available: minPrice [DEFAULT minPrice=1000000]
+
+> Available parameters: Integers
+
+
+### Complete examples
+#### One way flight from Ezeiza to Rio de Janeiro for two adults and two children aged 5 and 7
+> npx cypress run --env typeOfFlight="oneWay" from="EZE" to="GIG" passengers="2 2" childsAges="5 7"
