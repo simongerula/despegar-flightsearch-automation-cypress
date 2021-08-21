@@ -1,8 +1,5 @@
 /// <reference types="Cypress"/>
 
-/*Cypress.on('uncaught:exception', (err, runnable) => {
-    return false;
-})*/
 
 import SearchPage from '../support/pages/searchPage'
 import ResultsPage from '../support/pages/resultsPage'

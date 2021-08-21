@@ -9,6 +9,6 @@
         "flightClass": "Economica",
         "minPrice": 1000000
     },
-    "defaultCommandTimeout": 15000
+    "defaultCommandTimeout": 20000
 
 }

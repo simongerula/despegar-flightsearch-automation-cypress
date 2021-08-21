@@ -6,10 +6,10 @@ class SearchPage {
         this.roundTripRadioButton = ()=> cy.get("input[value='roundTrip']")
         this.oneWayRadioButton = ()=> cy.get("input[value='oneWay']")
         this.multipleDestinationRadioButton = ()=> cy.get("input[value='multipleDestination']")
-        //DESTINY AND ORIGIN
+        //DESTINATION AND ORIGIN
         this.originInput = ()=> cy.get('.input-container .input-tag').eq(0)
-        this.originDestinySelect = ()=> cy.get('.ac-group-items')
-        this.destinyInput = ()=> cy.get('.input-container .input-tag').eq(1)
+        this.originDestinationSelect = ()=> cy.get('.ac-group-items')
+        this.destinationInput = ()=> cy.get('.input-container .input-tag').eq(1)
         //DATES
         this.noDatesCheckBox = ()=> cy.get('input[class="checkbox-tag"]')
         this.calendarArrow = ()=> cy.get('.sbox5-floating-tooltip-opened > .sbox5-3-floating-tooltip-datepicker-wrapper > .calendar-container > .calendar-arrow-right')
@@ -48,24 +48,24 @@ class SearchPage {
 
         this.originInput()
         .type(Cypress.env('from'))
-        this.originDestinySelect()
+        this.originDestinationSelect()
         .should('be.visible')
         this.originInput()
         .type('{enter}')
-        this.destinyInput()
+        this.destinationInput()
         .type(Cypress.env('to'))
         // HOTFIX
         const toLength = Cypress.env('to').length
         for(let i=0; i<toLength; i++){
-            this.destinyInput()
+            this.destinationInput()
             .type('{backspace}{backspace}{backspace}')
         }
-        this.destinyInput()
+        this.destinationInput()
         .type(Cypress.env('to'))
         //
-        this.originDestinySelect()
+        this.originDestinationSelect()
         .should('be.visible')
-        this.destinyInput()
+        this.destinationInput()
         .type('{enter}')
 
     }
