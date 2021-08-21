@@ -54,6 +54,15 @@ class SearchPage {
         .type('{enter}')
         this.destinyInput()
         .type(Cypress.env('to'))
+        // HOTFIX
+        const toLength = Cypress.env('to').length
+        for(let i=0; i<toLength; i++){
+            this.destinyInput()
+            .type('{backspace}{backspace}{backspace}')
+        }
+        this.destinyInput()
+        .type(Cypress.env('to'))
+        //
         this.originDestinySelect()
         .should('be.visible')
         this.destinyInput()
