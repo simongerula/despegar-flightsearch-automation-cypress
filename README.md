@@ -58,7 +58,7 @@ This test checks whether there are flight results found between the origin and t
 
 ### 8 Price comparison
 In this test it is verified if the cheapest price found is lower than the established price
->Global variable available: minPrice [DEFAULT minPrice=1000000]
+>Global variable available: minPrice [DEFAULT maxPrice=1000000]
 
 > Available parameters: Integers
 
@@ -68,7 +68,22 @@ In this test it is verified if the cheapest price found is lower than the establ
 
 ### Complete examples
 #### One way flight from Ezeiza to Rio de Janeiro for two adults and two children aged 5 and 7
-> npx cypress run --env typeOfFlight="oneWay" from="EZE" to="GIG" passengers="2 2" childsAges="5 7"
+> npm run cy:run typeOfFlight="oneWay",from="EZE",to="GIG",passengers="2 2",childsAges="5 7"
+
+or
+
+> npx cypress run --env typeOfFlight="oneWay",from="EZE",to="GIG",passengers="2 2",childsAges="5 7"
 
 #### Roundtrip flight Barcelona Madrid for an adult with dates 2021-10-22 to 2021-11-02. Also want to see the process in the browser
-> npx cypress run --headed --env typeOfFlight="roundTrip" from="BCN" to="Madrid" dates="2021-10-22 2021-11-02"
+> npm run cy:run:headed typeOfFlight="roundTrip",from="BCN",to="Madrid",dates="2021-10-22 2021-11-02"
+
+or
+
+> npx cypress run --headed --env typeOfFlight="roundTrip",from="BCN",to="Madrid",dates="2021-10-22 2021-11-02"
+
+#### One way flight from New York to Los Angeles, no dates, maximum price 50000. Visible in browser
+> npm run cy:run:headed typeOfFlight="oneWay",dates="noDates",maxPrice="50000"
+
+or
+
+> npx cypress run --headed --env typeOfFlight="oneWay",dates="noDates",maxPrice="50000"
