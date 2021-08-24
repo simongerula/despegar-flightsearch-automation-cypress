@@ -25,14 +25,14 @@ class ResultsPage {
             .then(number => parseFloat(number))
             .then(number => number*1000)
             .then(number => cy.log('Lower price for ',Cypress.env('from')+' > '+Cypress.env('to')+' is : ARS$'+number))
-            .should('not.be.gt',Cypress.env('minPrice'))
+            .should('not.be.gt',Cypress.env('maxPrice'))
         } else {
             this.cheaperPriceText()
             .invoke('text')
             .then(number => parseFloat(number))
             .then(number => number*1000)
             .then(number => cy.log('Lower price for ',Cypress.env('from')+' > '+Cypress.env('to')+' is : ARS$'+number))
-            .should('not.be.gt',Cypress.env('minPrice')) 
+            .should('not.be.gt',Cypress.env('maxPrice')) 
         } 
 
     }

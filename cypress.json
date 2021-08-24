@@ -7,7 +7,7 @@
         "passengers": "2 1",
         "childsAges": "5",
         "flightClass": "Economica",
-        "minPrice": 1000000
+        "maxPrice": 1000000
     },
     "defaultCommandTimeout": 20000
 

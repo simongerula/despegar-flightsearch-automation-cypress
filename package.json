@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "cy:open": "cypress open",
-    "cy:run": "cypress run"
+    "cy:run": "./node_modules/.bin/cypress run --env",
+    "cy:run:headed": "./node_modules/.bin/cypress run --headed --env"
   },
   "author": "Simon Gerula",
   "license": "ISC",
