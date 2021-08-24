@@ -23,7 +23,7 @@ In this test, it is only verified that the page loads completely and correctly.
 ### 2 Selection of the type of flight
 In this test the type of trip to look for is defined, it can be round trip or one way trip.
 At the moment multidestination is not developed
->Global variable available: tof (typeOfTravel) [DEFAULT tof=roundTrip]
+>Global variable available:  typeOfTravel [DEFAULT typeOfTravel=roundTrip]
 
 > Available parameters: "roundTrip" / "oneWay".    Example tof=oneWay
 
