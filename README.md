@@ -1,6 +1,8 @@
 # Despegar Flightsearch Automation
 ***
-### Project in Cypress, for the parameterized automation of the search for flights on the Despegar site
+### Test suite for the parameterized automation of flight search on https://www.despegar.com.ar
+### This framework is made with Cypress and POM structure.
+
 
 It is a practical project, where the flight search is automated. Fully parameterizable from the console.
 At the end it makes a comparison with the minimum price established and also shows the lowest price found.
