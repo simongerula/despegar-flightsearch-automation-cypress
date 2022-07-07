@@ -1,5 +1,6 @@
 class SearchPage {
 
+    // LOCATORS
     constructor(){
 
         //TYPE OF FLIGHT
@@ -11,7 +12,7 @@ class SearchPage {
         this.originDestinationSelect = ()=> cy.get('.ac-group-items')
         this.destinationInput = ()=> cy.get('.input-container .input-tag').eq(1)
         //DATES
-        this.noDatesCheckBox = ()=> cy.get('input[class="checkbox-tag"]')
+        this.noDatesCheckBox = ()=> cy.get('.switch-container')
         this.calendarArrow = ()=> cy.get('.sbox5-floating-tooltip-opened > .sbox5-3-floating-tooltip-datepicker-wrapper > .calendar-container > .calendar-arrow-right')
         this.fromDatePicker = ()=> cy.get(`.sbox5-floating-tooltip-opened > .sbox5-3-floating-tooltip-datepicker-wrapper > .calendar-container > [data-month="${Cypress.env('dates').slice(0,7)}"] > .sbox5-monthgrid-dates > :nth-child(${parseInt(Cypress.env('dates').slice(8,10))+1})`)
         this.toDatePicker = ()=> cy.get(`.sbox5-floating-tooltip-opened > .sbox5-3-floating-tooltip-datepicker-wrapper > .calendar-container > [data-month="${Cypress.env('dates').slice(11,18)}"] > .sbox5-monthgrid-dates > :nth-child(${parseInt(Cypress.env('dates').slice(19,21))+1})`)
@@ -30,6 +31,7 @@ class SearchPage {
 
     }
 
+    // ACTIONS
     selectTypeOfFlight = ()=>{
 
         this.roundTripRadioButton()
@@ -175,5 +177,9 @@ class SearchPage {
 
     }
 
+    // NAVIGATION
+    navigateToFlightsPage(){
+        cy.visit('https://www.despegar.com.ar/vuelos/')
+    };
 }
 export default new SearchPage()

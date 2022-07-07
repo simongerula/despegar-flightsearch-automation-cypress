@@ -3,10 +3,10 @@ class ResultsPage {
     constructor(){
 
         // RESULTS FOUND?
-        this.resultsFound = ()=> cy.get('.safe-stay-banner-wrapper')
+        this.resultsFound = ()=> cy.get('.tabs-container')
         // PRICE COMPARISON
-        this.cheaperPriceText = ()=> cy.get(':nth-child(1) > :nth-child(1) > :nth-child(1) > cluster.COMMON > .eva-3-cluster-basic > .cluster-container > .CLUSTER > .fare-box-container > .fare-container > .fare-wrapper > main-fare > .fare-price-wrapper > .fare > :nth-child(1) > flights-price > :nth-child(1) > flights-price-element > .price-currency > .flight-price-label > em > .amount')
-        this.cheaperPriceNoDatesText = ()=> cy.get(':nth-child(1) > :nth-child(1) > :nth-child(1) > .COMMON > .margin-bottom-reduced-cluster > :nth-child(1) > .eva-3-cluster-basic > .cluster-container > .cluster-pricebox-container > .amount > .eva-3-pricebox-cluster > .pricebox-value-container > .pricebox-value > .pricebox-big-text')
+        this.cheaperPriceText = ()=> cy.get(':nth-child(1) > :nth-child(1) > :nth-child(1) > cluster.VIRTUAL_INTERLINING_2OW > .eva-3-cluster-basic > .cluster-container > .cluster-pricebox-container > .fare-box-container > .fare-container > .fare-wrapper > main-fare > .fare-price-wrapper > .fare > :nth-child(1) > flights-price > :nth-child(1) > flights-price-element > .price-currency > .flight-price-label > em > .amount')
+        this.cheaperPriceNoDatesText = ()=> cy.get(':nth-child(1) > :nth-child(1) > :nth-child(1) > .VIRTUAL_INTERLINING_2RT > .margin-bottom-reduced-cluster > :nth-child(1) > .eva-3-cluster-basic > .cluster-container > .cluster-pricebox-container > .amount > .eva-3-pricebox-cluster > .pricebox-value-container > .pricebox-value > .pricebox-big-text')
 
     }
 

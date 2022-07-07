@@ -1,7 +1,7 @@
 {
   "name": "despegar-flightsearch-automation",
   "version": "1.0.0",
-  "description": "Project in Cypress, for the parameterized automation of the search for flights on the Despegar site",
+  "description": "Project in Cypress, for the parameterized automation of flight search on the Despegar site",
   "main": "index.js",
   "scripts": {
     "cy:open": "cypress open",
@@ -11,6 +11,6 @@
   "author": "Simon Gerula",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^8.2.0"
+    "cypress": "^10.3.0"
   }
 }
