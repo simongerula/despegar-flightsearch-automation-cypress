@@ -1,6 +1,6 @@
 # Despegar Flightsearch Automation
 ***
-### Test suite for the parameterized automation of flight search on https://www.despegar.com.ar
+### Automated Test Suite for flight search on https://www.despegar.com.ar
 ### This framework is made with Cypress 10 and POM structure.
 
 
