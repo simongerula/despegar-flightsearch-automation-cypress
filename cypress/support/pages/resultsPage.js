@@ -22,19 +22,21 @@ class ResultsPage {
 
     comparePrice = ()=>{
 
+        const passengers = Cypress.env('passengers').split(' ');
+
         if(Cypress.env('dates') === 'noDates'){
             this.cheaperPriceNoDatesText()
             .invoke('text')
             .then(number => parseFloat(number))
             .then(number => number*1000)
-            .then(number => cy.log('Lower price for ',Cypress.env('from')+' > '+Cypress.env('to')+' is : ARS$'+number))
+            .then(number => cy.log('Lower price for ',Cypress.env('from')+' > '+Cypress.env('to')+' '+passengers[0]+' Adults and '+passengers[1]+' Children is : ARS$'+number))
             .should('not.be.gt',Cypress.env('maxPrice'))
         } else {
             this.cheaperPriceText()
             .invoke('text')
             .then(number => parseFloat(number))
             .then(number => number*1000)
-            .then(number => cy.log('Lower price for ',Cypress.env('from')+' > '+Cypress.env('to')+' is : ARS$'+number))
+            .then(number => cy.log('Lower price for ',Cypress.env('from')+' > '+Cypress.env('to')+' '+passengers[0]+' Adults and '+passengers[1]+' Children is : ARS$'+number))
             .should('not.be.gt',Cypress.env('maxPrice')) 
         } 
 
