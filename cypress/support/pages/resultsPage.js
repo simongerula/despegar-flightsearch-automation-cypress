@@ -1,5 +1,7 @@
 class ResultsPage {
 
+
+    //LOCATORS
     constructor(){
 
         // RESULTS FOUND?
@@ -10,6 +12,7 @@ class ResultsPage {
 
     }
 
+    // ACTIONS
     haveResults = ()=> {
 
         this.resultsFound()
