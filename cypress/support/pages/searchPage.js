@@ -18,6 +18,7 @@ class SearchPage {
         this.toDatePicker = ()=> cy.get(`.sbox5-floating-tooltip-opened > .sbox5-3-floating-tooltip-datepicker-wrapper > .calendar-container > [data-month="${Cypress.env('dates').slice(11,18)}"] > .sbox5-monthgrid-dates > :nth-child(${parseInt(Cypress.env('dates').slice(19,21))+1})`)
         this.fromDateInput = ()=> cy.get('.input-container .input-tag').eq(2)
         this.toDateInput = ()=> cy.get('.input-container .input-tag').eq(3)
+        this.dateConfirmation = ()=> cy.get('.sbox5-floating-tooltip-opened > .calendar-footer > .calendar-footer-cta-container > .sbox5-3-btn > .btn-text')
         //PASSENGERS
         this.passengersInput = ()=> cy.get('.input-container .input-tag').eq(4)
         this.adultsAddButton = ()=> cy.get(':nth-child(1) > .stepper__room__row__stepper__contaer > .sbox5-3-steppers > .steppers-icon-right')
@@ -116,6 +117,8 @@ class SearchPage {
                 this.toDatePicker()
                 .click()
             }
+            this.dateConfirmation()
+            .click()
         }
     }
 
