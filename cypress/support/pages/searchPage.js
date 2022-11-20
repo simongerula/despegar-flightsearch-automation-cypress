@@ -50,6 +50,7 @@ class SearchPage {
     selectOriginAndDestination = ()=>{
 
         this.originInput()
+        .clear()
         .type(Cypress.env('from'))
         this.originDestinationSelect()
         .should('be.visible')
