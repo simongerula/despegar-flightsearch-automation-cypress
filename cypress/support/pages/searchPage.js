@@ -118,8 +118,10 @@ class SearchPage {
                 this.toDatePicker()
                 .click()
             }
-            this.dateConfirmation()
-            .click()
+            if(Cypress.env('typeOfFlight') != 'oneWay'){
+                this.dateConfirmation()
+                .click()
+            }
         }
     }
 

@@ -9,7 +9,7 @@ module.exports = defineConfig({
     passengers: '2 1',
     childsAges: '5',
     flightClass: 'Económica',
-    maxPrice: 1000000,
+    maxPrice: 2000000,
   },
   defaultCommandTimeout: 20000,
   e2e: {
